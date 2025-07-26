@@ -55,8 +55,8 @@ A modern, responsive portfolio website built with Next.js, showcasing design wor
 1. **Clone the repository**
 
 ```bash
-git clone <repository-url>
-cd portfolio-website
+git clone https://github.com/Chiesa14/portfolio.git
+cd portfolio
 ```
 
 2. **Install dependencies**
@@ -191,7 +191,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-Remy Chiesa - [@chiesa14](https://instagram.com/chiesa14)
+Remy Chiesa - [@chiesa14](https://instagram.com/ti.sho.k)
 
 Project Link: [https://github.com/Chiesa14/portfolio](https://github.com/Chiesa14/portfolio)
 
