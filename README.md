@@ -43,33 +43,6 @@ A modern, responsive portfolio website built with Next.js, showcasing design wor
 - **UI Components:** Shadcn/ui
 - **Notifications:** Sonner
 
-## 📁 Project Structure
-
-```
-├── app/
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
-├── components/
-│   ├── ui/                 # Shadcn/ui components
-│   ├── Button.tsx          # Custom button component
-│   ├── Navbar.tsx          # Responsive navigation
-│   ├── HomeSection.tsx     # Hero section
-│   ├── WorkedWith.tsx      # Client logos section
-│   ├── CaseStudiesSection.tsx
-│   ├── ListCaseStudies.tsx
-│   ├── Testimonials.tsx
-│   ├── ListTestimonials.tsx
-│   ├── RecentWorks.tsx
-│   ├── ListRecentWorks.tsx
-│   ├── GetInTouch.tsx      # Contact form
-│   └── Footer.tsx          # Site footer
-├── public/
-│   ├── images/            # Portfolio images
-│   └── icons/             # Social media icons
-└── ...
-```
-
 ## 🚀 Getting Started
 
 ### Prerequisites
