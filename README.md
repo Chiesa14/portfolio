@@ -63,10 +63,6 @@ cd portfolio
 
 ```bash
 npm install
-# or
-yarn install
-# or
-pnpm install
 ```
 
 3. **Add your content**
@@ -79,10 +75,6 @@ pnpm install
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 5. **Open your browser**
