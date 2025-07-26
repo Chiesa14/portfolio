@@ -113,7 +113,7 @@ export default function Footer() {
           {/* Contact Info */}
           <div className="sm:col-span-2 lg:col-span-1">
             <h4 className="text-lg font-semibold text-white mb-4 sm:mb-6">
-              Let's Connect
+              Let&apos;s Connect
             </h4>
             <div className="space-y-3 sm:space-y-4">
               <div>
