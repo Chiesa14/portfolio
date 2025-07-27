@@ -1,10 +1,10 @@
 "use client";
 
-import CaseStudiesSection from "@/pages/CaseStudiesSection";
-import GetInTouch from "@/pages/GetInTouch";
-import HomeSection from "@/pages/HomeSection";
-import RecentWorks from "@/pages/RecentWorks";
-import Testimonials from "@/pages/Testimonials";
+import CaseStudiesSection from "@/sections/CaseStudiesSection";
+import GetInTouch from "@/sections/GetInTouch";
+import HomeSection from "@/sections/HomeSection";
+import RecentWorks from "@/sections/RecentWorks";
+import Testimonials from "@/sections/Testimonials";
 
 export default function Home() {
   return (
