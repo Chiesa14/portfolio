@@ -5,34 +5,34 @@ import { FaQuoteLeft } from "react-icons/fa";
 export default function ListTestimonials() {
   const testimonials = [
     {
-      name: "Client Name",
+      name: "Sarah Munyampuhwe",
       message:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Working with him was incredible. He delivered exactly what we needed and exceeded our expectations. The attention to detail and professionalism was outstanding.",
       image: "/images/use.png",
     },
     {
-      name: "Client Name",
+      name: "Celestim Nzeyimana",
       message:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/images/use.png",
+        "The project was completed on time and within budget. Communication was excellent throughout the process, and the final result helped boost our business significantly.",
+      image: "/images/use1.jpeg",
     },
     {
-      name: "Client Name",
+      name: "Mugabo Christian",
       message:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/images/use.png",
+        "I was impressed by his creative approach and technical expertise. He took our vision and turned it into something even better than we imagined. Highly recommended!",
+      image: "/images/use3.jpeg",
     },
     {
-      name: "Client Name",
+      name: "Ishimwe Justin",
       message:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/images/use.png",
+        "Professional, reliable, and talented. He solved complex problems with elegant solutions and was always available when I had questions. Will definitely work with him again.",
+      image: "/images/use2.jpeg",
     },
     {
-      name: "Client Name",
+      name: "Isadora Jane",
       message:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/images/use.png",
+        "The quality of work speaks for itself. From initial consultation to final delivery, every step was handled with care and expertise. Our ROI improved dramatically after launch.",
+      image: "/images/use4.jpeg",
     },
   ];
 

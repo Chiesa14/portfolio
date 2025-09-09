@@ -3,24 +3,30 @@
 import Button from "./Button";
 
 export default function ListRecntWorks() {
-  const caseStudies = [
+  const projects = [
     {
-      title: "Work name here",
+      title: "Brop",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna.",
-      coverImage: "/images/demo.png",
+        "A public website created by the Brop-co organization. It serves as an online platform where users can visit, interact with, and learn more about Brop-co and what they offer.",
+      coverImage: "/images/brop.png",
+      link: "https://www.brop.co.rw",
     },
     {
-      title: "Work name here",
+      title: "ERC Youth System",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna.",
-      coverImage: "/images/demo.png",
+        "A system that streamlines church operations, including member management, event tracking, and administrative tasks, helping improve coordination and engagement among members.",
+      coverImage: "/images/erc.png",
+      link: "https://erc-system.vercel.app",
     },
   ];
 
+  const handleKnowMoreClick = (link: string | URL | undefined) => {
+    window.open(link, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="mt-16 sm:mt-24 lg:mt-32 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
-      {caseStudies.map((item, id) => (
+      {projects.map((item, id) => (
         <div key={id} className="mb-8 sm:mb-12 lg:mb-20">
           <div className="w-full h-[250px] sm:h-[280px] lg:h-[300px] group overflow-hidden rounded-lg mb-6 sm:mb-8">
             <div
@@ -42,6 +48,7 @@ export default function ListRecntWorks() {
             className="px-4 sm:px-5 py-2 text-sm sm:text-base w-full sm:w-auto"
             color="green"
             size={14}
+            onClick={() => handleKnowMoreClick(item.link)}
           />
         </div>
       ))}

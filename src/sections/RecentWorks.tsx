@@ -15,9 +15,10 @@ export default function RecentWorks() {
           className="w-full sm:w-3/4 lg:w-[40%] mx-auto text-center mt-2 tracking-wider text-sm sm:text-base leading-relaxed"
           style={{ wordSpacing: "0.4rem" }}
         >
-          Solving user & business problems since last 15+ years.Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.{" "}
+          Over the past 15+ years, we&apos;ve helped businesses and users
+          overcome real-world challenges through innovative solutions. Our work
+          spans design, development, and problem-solving, ensuring meaningful
+          impact and measurable results.{" "}
         </p>
         <div className="w-full lg:w-4/5 mx-auto">
           <ListRecntWorks />

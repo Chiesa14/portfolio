@@ -16,9 +16,10 @@ export default function CaseStudiesSection() {
           className="w-full sm:w-3/4 lg:w-[40%] mx-auto text-center mt-2 tracking-wider text-sm sm:text-base leading-relaxed"
           style={{ wordSpacing: "0.4rem" }}
         >
-          Solving user & business problems since last 15+ years.Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.{" "}
+          Showcasing how thoughtful design and engineering come together to
+          solve real user and business challenges. Each case study highlights
+          the process of turning complex ideas into practical, impactful digital
+          solutions that deliver measurable results and lasting value.{" "}
         </p>
         <div className="w-full lg:w-4/5 mx-auto">
           <ListCaseStudies />

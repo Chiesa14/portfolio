@@ -16,8 +16,8 @@ export default function Testimonials() {
           className="w-full sm:w-3/4 lg:w-[40%] mx-auto text-center mt-2 tracking-wider text-sm sm:text-base leading-relaxed"
           style={{ wordSpacing: "0.4rem" }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Hear what our clients have to say about their experience working with
+          us. Real stories from real people who trusted us with their projects.
         </p>
         <div className="w-full lg:w-4/5 mx-auto">
           <ListTestimonials />

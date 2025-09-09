@@ -6,6 +6,8 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 import {
   Form,
@@ -17,8 +19,12 @@ import {
 } from "@/components/ui/form";
 import Button from "@/components/Button";
 
-// Zod schema
+// Initialize EmailJS with your public key
+emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY");
+
+// Zod schema - Added name field
 const contactSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Invalid email"),
   phone: z
     .string()
@@ -30,18 +36,49 @@ const contactSchema = z.object({
 type ContactForm = z.infer<typeof contactSchema>;
 
 export default function GetInTouch() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const form = useForm<ContactForm>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
+      name: "",
       email: "",
       phone: "",
       message: "",
     },
   });
 
-  function onSubmit(data: ContactForm) {
-    toast.success("Submitted successfully!");
-    console.log(data);
+  async function onSubmit(data: ContactForm) {
+    setIsSubmitting(true);
+
+    try {
+      // EmailJS template parameters - Added name field
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        phone: data.phone,
+        message: data.message,
+        to_email: "remychiesa14@gmail.com",
+      };
+
+      const result = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID",
+        templateParams
+      );
+
+      if (result.status === 200) {
+        toast.success("Message sent successfully! I'll get back to you soon.");
+        form.reset();
+      } else {
+        toast.error("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Something went wrong. Please try again.");
+      console.error("EmailJS Error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -67,6 +104,27 @@ export default function GetInTouch() {
             onSubmit={form.handleSubmit(onSubmit)}
             className="w-full max-w-lg mx-auto mt-8 sm:mt-12 flex flex-col gap-6 sm:gap-8"
           >
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem className="grid w-full items-center gap-2 sm:gap-3">
+                  <FormLabel className="font-bold text-sm sm:text-base text-black dark:text-white">
+                    Name
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      type="text"
+                      placeholder="Please enter your name"
+                      className="py-4 sm:py-6 text-sm sm:text-base"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage className="text-xs sm:text-sm" />
+                </FormItem>
+              )}
+            />
+
             <FormField
               control={form.control}
               name="email"
@@ -131,10 +189,11 @@ export default function GetInTouch() {
             />
 
             <Button
-              text="Submit"
+              text={isSubmitting ? "Sending..." : "Submit"}
               color="green"
-              className="w-full py-3 sm:py-4 text-base sm:text-lg mt-4 sm:mt-6"
-              onClick={() => onSubmit(form.getValues())}
+              className={`w-full py-3 sm:py-4 text-base sm:text-lg mt-4 sm:mt-6  ${
+                isSubmitting ? "cursor-not-allowed opacity-50" : ""
+              }`}
             />
           </form>
         </Form>

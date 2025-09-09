@@ -4,11 +4,11 @@ import Image from "next/image";
 
 export default function WorkedWith() {
   const withItems = [
-    { name: "Dropbox", icon: "icons/instagram.svg" },
-    { name: "Dropbox", icon: "icons/instagram.svg" },
-    { name: "Dropbox", icon: "icons/instagram.svg" },
-    { name: "Dropbox", icon: "icons/instagram.svg" },
-    { name: "Dropbox", icon: "icons/instagram.svg" },
+    { name: "RTB", icon: "icons/rtb.svg" },
+    { name: "RCA", icon: "icons/rca.svg" },
+    { name: "Yokaizen", icon: "icons/yokaizen.svg" },
+    { name: "TAME", icon: "icons/tame.svg" },
+    // { name: "TrackR", icon: "icons/instagram.svg" },
   ];
 
   return (
