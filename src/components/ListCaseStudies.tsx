@@ -83,7 +83,7 @@ export default function ListCaseStudies() {
                 color={
                   item.category == "EdTech"
                     ? "blue"
-                    : item.category == "Pharma"
+                    : item.category == "Pharma" || item.category == "Healthcare"
                     ? "sky"
                     : "orange"
                 }
