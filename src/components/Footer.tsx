@@ -8,6 +8,7 @@ const navigationLinks = [
   { name: "Case Studies", href: "#case-studies" },
   { name: "Testimonials", href: "#testimonials" },
   { name: "Recent Work", href: "#recent-work" },
+  { name: "Skills", href: "#skills" },
   { name: "Get In Touch", href: "#get-in-touch" },
 ];
 
@@ -33,6 +34,7 @@ const services = [
   "UI/UX Design",
   "Web Development",
   "Mobile App Design",
+  "PenTesting & Security",
   "Brand Identity",
   "Consultation",
 ];

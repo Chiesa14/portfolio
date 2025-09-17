@@ -5,6 +5,7 @@ import GetInTouch from "@/sections/GetInTouch";
 import HomeSection from "@/sections/HomeSection";
 import RecentWorks from "@/sections/RecentWorks";
 import Testimonials from "@/sections/Testimonials";
+import SkillsSection from "../sections/SkillsSection";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <CaseStudiesSection />
       <Testimonials />
       <RecentWorks />
+      <SkillsSection />
       <GetInTouch />
     </div>
   );
