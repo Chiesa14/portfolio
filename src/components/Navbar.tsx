@@ -62,7 +62,7 @@ export default function Navbar() {
         {/* Social icons - always visible */}
         <div className="flex gap-3 sm:gap-4 items-center">
           <a
-            href="https://instagram.com/chiesa14"
+            href="https://instagram.com/ti.sho.k"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
